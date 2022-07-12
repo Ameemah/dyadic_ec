@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.1),
-    on July 11, 2022, at 14:18
+    on July 12, 2022, at 11:51
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -96,76 +96,34 @@ eyetracker = None
 defaultKeyboard = keyboard.Keyboard(backend='iohub')
 
 # --- Initialize components for Routine "c1odd" ---
-ROLO = sound.Sound('rightopenleftopen (1).wav', secs=2.0, stereo=True, hamming=True,
+ROLO = sound.Sound('ROLO20.wav', secs=-1, stereo=True, hamming=True,
     name='ROLO')
 ROLO.setVolume(1.0)
-filler1 = visual.TextStim(win=win, name='filler1',
-    text=None,
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
 
 # --- Initialize components for Routine "c1even" ---
-RCLC = sound.Sound('rightcloseleftclose (1).wav', secs=2.0, stereo=True, hamming=True,
+RCLC = sound.Sound('RCLC20.wav', secs=-1, stereo=True, hamming=True,
     name='RCLC')
 RCLC.setVolume(1.0)
-filler2 = visual.TextStim(win=win, name='filler2',
-    text=None,
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
 
 # --- Initialize components for Routine "c2odd" ---
-ROLC = sound.Sound('leftcloseopenright.wav', secs=2.0, stereo=True, hamming=True,
+ROLC = sound.Sound('ROLC20.wav', secs=-1, stereo=True, hamming=True,
     name='ROLC')
 ROLC.setVolume(1.0)
-filler3 = visual.TextStim(win=win, name='filler3',
-    text=None,
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
 
 # --- Initialize components for Routine "c2even" ---
-RCLO = sound.Sound('rightcloseleftopen (1).wav', secs=2.0, stereo=True, hamming=True,
+RCLO = sound.Sound('RCLO20.wav', secs=-1, stereo=True, hamming=True,
     name='RCLO')
 RCLO.setVolume(1.0)
-filler4 = visual.TextStim(win=win, name='filler4',
-    text=None,
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
 
 # --- Initialize components for Routine "c3odd" ---
-RCLO2 = sound.Sound('rightcloseleftopen (1).wav', secs=2.0, stereo=True, hamming=True,
+RCLO2 = sound.Sound('RCLO20.wav', secs=-1, stereo=True, hamming=True,
     name='RCLO2')
 RCLO2.setVolume(1.0)
-filler5 = visual.TextStim(win=win, name='filler5',
-    text=None,
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
 
 # --- Initialize components for Routine "c4even" ---
-ROLC2 = sound.Sound('leftcloseopenright.wav', secs=2.0, stereo=True, hamming=True,
+ROLC2 = sound.Sound('ROLC20.wav', secs=-1, stereo=True, hamming=True,
     name='ROLC2')
 ROLC2.setVolume(1.0)
-filler6 = visual.TextStim(win=win, name='filler6',
-    text=None,
-    font='Open Sans',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=-1.0);
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -193,10 +151,10 @@ for thisLoop10 in Loop10:
     # --- Prepare to start Routine "c1odd" ---
     continueRoutine = True
     # update component parameters for each repeat
-    ROLO.setSound('rightopenleftopen (1).wav', secs=2.0, hamming=True)
+    ROLO.setSound('ROLO20.wav', secs=20.0, hamming=True)
     ROLO.setVolume(1.0, log=False)
     # keep track of which components have finished
-    c1oddComponents = [ROLO, filler1]
+    c1oddComponents = [ROLO]
     for thisComponent in c1oddComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -228,33 +186,13 @@ for thisLoop10 in Loop10:
             ROLO.play(when=win)  # sync with win flip
         if ROLO.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > ROLO.tStartRefresh + 2.0-frameTolerance:
+            if tThisFlipGlobal > ROLO.tStartRefresh + 20.0-frameTolerance:
                 # keep track of stop time/frame for later
                 ROLO.tStop = t  # not accounting for scr refresh
                 ROLO.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'ROLO.stopped')
                 ROLO.stop()
-        
-        # *filler1* updates
-        if filler1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            filler1.frameNStart = frameN  # exact frame index
-            filler1.tStart = t  # local t and not account for scr refresh
-            filler1.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(filler1, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'filler1.started')
-            filler1.setAutoDraw(True)
-        if filler1.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > filler1.tStartRefresh + 20.0-frameTolerance:
-                # keep track of stop time/frame for later
-                filler1.tStop = t  # not accounting for scr refresh
-                filler1.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'filler1.stopped')
-                filler1.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -284,10 +222,10 @@ for thisLoop10 in Loop10:
     # --- Prepare to start Routine "c1even" ---
     continueRoutine = True
     # update component parameters for each repeat
-    RCLC.setSound('rightcloseleftclose (1).wav', secs=2.0, hamming=True)
+    RCLC.setSound('RCLC20.wav', secs=20.0, hamming=True)
     RCLC.setVolume(1.0, log=False)
     # keep track of which components have finished
-    c1evenComponents = [RCLC, filler2]
+    c1evenComponents = [RCLC]
     for thisComponent in c1evenComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -319,33 +257,13 @@ for thisLoop10 in Loop10:
             RCLC.play(when=win)  # sync with win flip
         if RCLC.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > RCLC.tStartRefresh + 2.0-frameTolerance:
+            if tThisFlipGlobal > RCLC.tStartRefresh + 20.0-frameTolerance:
                 # keep track of stop time/frame for later
                 RCLC.tStop = t  # not accounting for scr refresh
                 RCLC.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'RCLC.stopped')
                 RCLC.stop()
-        
-        # *filler2* updates
-        if filler2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            filler2.frameNStart = frameN  # exact frame index
-            filler2.tStart = t  # local t and not account for scr refresh
-            filler2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(filler2, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'filler2.started')
-            filler2.setAutoDraw(True)
-        if filler2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > filler2.tStartRefresh + 20.0-frameTolerance:
-                # keep track of stop time/frame for later
-                filler2.tStop = t  # not accounting for scr refresh
-                filler2.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'filler2.stopped')
-                filler2.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -375,10 +293,10 @@ for thisLoop10 in Loop10:
     # --- Prepare to start Routine "c2odd" ---
     continueRoutine = True
     # update component parameters for each repeat
-    ROLC.setSound('leftcloseopenright.wav', secs=2.0, hamming=True)
+    ROLC.setSound('ROLC20.wav', secs=20.0, hamming=True)
     ROLC.setVolume(1.0, log=False)
     # keep track of which components have finished
-    c2oddComponents = [ROLC, filler3]
+    c2oddComponents = [ROLC]
     for thisComponent in c2oddComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -410,33 +328,13 @@ for thisLoop10 in Loop10:
             ROLC.play(when=win)  # sync with win flip
         if ROLC.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > ROLC.tStartRefresh + 2.0-frameTolerance:
+            if tThisFlipGlobal > ROLC.tStartRefresh + 20.0-frameTolerance:
                 # keep track of stop time/frame for later
                 ROLC.tStop = t  # not accounting for scr refresh
                 ROLC.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'ROLC.stopped')
                 ROLC.stop()
-        
-        # *filler3* updates
-        if filler3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            filler3.frameNStart = frameN  # exact frame index
-            filler3.tStart = t  # local t and not account for scr refresh
-            filler3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(filler3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'filler3.started')
-            filler3.setAutoDraw(True)
-        if filler3.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > filler3.tStartRefresh + 20.0-frameTolerance:
-                # keep track of stop time/frame for later
-                filler3.tStop = t  # not accounting for scr refresh
-                filler3.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'filler3.stopped')
-                filler3.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -466,10 +364,10 @@ for thisLoop10 in Loop10:
     # --- Prepare to start Routine "c2even" ---
     continueRoutine = True
     # update component parameters for each repeat
-    RCLO.setSound('rightcloseleftopen (1).wav', secs=2.0, hamming=True)
+    RCLO.setSound('RCLO20.wav', secs=20.0, hamming=True)
     RCLO.setVolume(1.0, log=False)
     # keep track of which components have finished
-    c2evenComponents = [RCLO, filler4]
+    c2evenComponents = [RCLO]
     for thisComponent in c2evenComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -501,33 +399,13 @@ for thisLoop10 in Loop10:
             RCLO.play(when=win)  # sync with win flip
         if RCLO.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > RCLO.tStartRefresh + 2.0-frameTolerance:
+            if tThisFlipGlobal > RCLO.tStartRefresh + 20.0-frameTolerance:
                 # keep track of stop time/frame for later
                 RCLO.tStop = t  # not accounting for scr refresh
                 RCLO.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'RCLO.stopped')
                 RCLO.stop()
-        
-        # *filler4* updates
-        if filler4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            filler4.frameNStart = frameN  # exact frame index
-            filler4.tStart = t  # local t and not account for scr refresh
-            filler4.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(filler4, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'filler4.started')
-            filler4.setAutoDraw(True)
-        if filler4.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > filler4.tStartRefresh + 20.0-frameTolerance:
-                # keep track of stop time/frame for later
-                filler4.tStop = t  # not accounting for scr refresh
-                filler4.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'filler4.stopped')
-                filler4.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -557,10 +435,10 @@ for thisLoop10 in Loop10:
     # --- Prepare to start Routine "c3odd" ---
     continueRoutine = True
     # update component parameters for each repeat
-    RCLO2.setSound('rightcloseleftopen (1).wav', secs=2.0, hamming=True)
+    RCLO2.setSound('RCLO20.wav', secs=20.0, hamming=True)
     RCLO2.setVolume(1.0, log=False)
     # keep track of which components have finished
-    c3oddComponents = [RCLO2, filler5]
+    c3oddComponents = [RCLO2]
     for thisComponent in c3oddComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -592,33 +470,13 @@ for thisLoop10 in Loop10:
             RCLO2.play(when=win)  # sync with win flip
         if RCLO2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > RCLO2.tStartRefresh + 2.0-frameTolerance:
+            if tThisFlipGlobal > RCLO2.tStartRefresh + 20.0-frameTolerance:
                 # keep track of stop time/frame for later
                 RCLO2.tStop = t  # not accounting for scr refresh
                 RCLO2.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'RCLO2.stopped')
                 RCLO2.stop()
-        
-        # *filler5* updates
-        if filler5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            filler5.frameNStart = frameN  # exact frame index
-            filler5.tStart = t  # local t and not account for scr refresh
-            filler5.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(filler5, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'filler5.started')
-            filler5.setAutoDraw(True)
-        if filler5.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > filler5.tStartRefresh + 20.0-frameTolerance:
-                # keep track of stop time/frame for later
-                filler5.tStop = t  # not accounting for scr refresh
-                filler5.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'filler5.stopped')
-                filler5.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -648,10 +506,10 @@ for thisLoop10 in Loop10:
     # --- Prepare to start Routine "c4even" ---
     continueRoutine = True
     # update component parameters for each repeat
-    ROLC2.setSound('leftcloseopenright.wav', secs=2.0, hamming=True)
+    ROLC2.setSound('ROLC20.wav', secs=20.0, hamming=True)
     ROLC2.setVolume(1.0, log=False)
     # keep track of which components have finished
-    c4evenComponents = [ROLC2, filler6]
+    c4evenComponents = [ROLC2]
     for thisComponent in c4evenComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -683,33 +541,13 @@ for thisLoop10 in Loop10:
             ROLC2.play(when=win)  # sync with win flip
         if ROLC2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > ROLC2.tStartRefresh + 2.0-frameTolerance:
+            if tThisFlipGlobal > ROLC2.tStartRefresh + 20.0-frameTolerance:
                 # keep track of stop time/frame for later
                 ROLC2.tStop = t  # not accounting for scr refresh
                 ROLC2.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'ROLC2.stopped')
                 ROLC2.stop()
-        
-        # *filler6* updates
-        if filler6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            filler6.frameNStart = frameN  # exact frame index
-            filler6.tStart = t  # local t and not account for scr refresh
-            filler6.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(filler6, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'filler6.started')
-            filler6.setAutoDraw(True)
-        if filler6.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > filler6.tStartRefresh + 20.0-frameTolerance:
-                # keep track of stop time/frame for later
-                filler6.tStop = t  # not accounting for scr refresh
-                filler6.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'filler6.stopped')
-                filler6.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
